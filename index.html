@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>John Conway's Game Of Life</title>
+  </head>
+  <body>
+    <div class="main__container">
+      <header>
+        <h1>The Game Of Life</h1>
+        <p>
+          "The Game of Life, also known simply as Life, is a cellular automaton
+          devised by the British mathematician John Horton Conway in 1970. It is
+          a zero-player game, meaning that its evolution is determined by its
+          initial state, requiring no further input. One interacts with the Game
+          of Life by creating an initial configuration and observing how it
+          evolves."
+        </p>
+        <p class="source">
+          Source:
+          <a
+            href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Wikipedia</a
+          >
+        </p>
+      </header>
+      <section>
+        <div class="controls__container">
+          <button onclick="clearPattern()">Clear</button>
+          <button onclick="nextPattern()">Next</button>
+          <button id="start-button">Start</button>
+        </div>
+        <canvas id="canvas" width="800" height="500"></canvas>
+        <div class="rules-container">
+          <h3>
+            Rules:
+            <span class="source"
+              >(Source:
+              <a
+                href="https://bitstorm.org/gameoflife/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >bitstorm.org/gameoflife/</a
+              >)</span
+            >
+          </h3>
+
+          <p class="rule-label">For a space that is 'populated':</p>
+          <ul>
+            <li>Each cell with one or no neighbors dies, as if by solitude.</li>
+            <li>
+              Each cell with four or more neighbors dies, as if by
+              overpopulation.
+            </li>
+            <li>Each cell with two or three neighbors survives.</li>
+          </ul>
+
+          <p class="rule-label">For a space that is 'empty' or 'unpopulated'</p>
+          <ul>
+            <li>Each cell with three neighbors becomes populated.</li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <p>Made by Benjamin Benais - 2020</p>
+        <p>-</p>
+        <p>
+          Source code:
+          <a
+            href="https://github.com/benjaminbenais/the-game-of-life.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/benjaminbenais/the-game-of-life.github.io
+          </a>
+        </p>
+      </footer>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
